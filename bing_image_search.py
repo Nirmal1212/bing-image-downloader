@@ -13,21 +13,9 @@ NUM_RESULTS = 50
 FILE_NAME = 'bing_results'   #.json is automattically appended to the file name
 search_terms = [
                     "men Formal Shirt",
-                    "men Casual Shirt",
-                    "men T-shirts",
-                    "men Jackets",
-                    "men Suits",
-                    "sunglasses for men",
                     "sunglasses for women",
                     "women bags",
-                    "men bags",
-                    "men footwear",
-                    "women footwear",
-                    "men hats",
-                    "women hats",
-                    "hats and caps",
                     "women jewellery",
-                    "jewelry",
                     "mens belt"
                 ]
 
@@ -52,7 +40,6 @@ for term in search_terms:
         url = res[i].media_url
         des_path,fname = os.path.join(DEST_FOLDER,term),url.split('/')[-1]
         download_files.append((url,os.path.join(des_path,fname)))
-    break
 
 # Create the destination folder if it does not exist
 if os.path.exists(DEST_FOLDER) == False:
