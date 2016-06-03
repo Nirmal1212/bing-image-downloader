@@ -16,11 +16,16 @@ Processed file saved at nodupes_bing_results.json
 
 *********
 sample search result =
-{'height': u'1000', 'width': u'1000', 'file_size': u'156225', 'content_type': u'image/jpeg', 'title': u"Bluemint Men's Formal Shirts 2014 (3)", 'search_term': 'men Formal Shirt', 'source_url': u'http://thebestfashionblog.com/mens-fashion/bluemint-mens-formal-shirts-2014', 'id': u'1cadcd14-c858-45e2-af95-60a881cdbb3f', 'media_url': u'http://thebestfashionblog.com/wp-content/uploads/2014/03/Mens-Formal-Shirts-2014-3.jpg'}
+{'height': u'1000', 'width': u'1000', 'file_size': u'156225', 'content_type': u'image/jpeg', 
+'title': u"Bluemint Men's Formal Shirts 2014 (3)", 'search_term': 'men Formal Shirt', 
+'source_url': u'http://thebestfashionblog.com/mens-fashion/bluemint-mens-formal-shirts-2014', 
+'id': u'1cadcd14-c858-45e2-af95-60a881cdbb3f', 
+'media_url': u'http://thebestfashionblog.com/wp-content/uploads/2014/03/Mens-Formal-Shirts-2014-3.jpg'}
 
 *********
 sample converted result for downloading =
-[u'http://thebestfashionblog.com/wp-content/uploads/2014/03/Mens-Formal-Shirts-2014-3.jpg', u'bingImages/men Formal Shirt/Mens-Formal-Shirts-2014-3.jpg']
+[u'http://thebestfashionblog.com/wp-content/uploads/2014/03/Mens-Formal-Shirts-2014-3.jpg', 
+u'bingImages/men Formal Shirt/Mens-Formal-Shirts-2014-3.jpg']
 
 ```
 
