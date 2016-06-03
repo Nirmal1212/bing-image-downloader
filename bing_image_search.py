@@ -4,20 +4,19 @@
 # Author : Nirmalkumar Sathiamurthi
 # Date : June 3 2016
 #
-from py_bing_search import PyBingImageSearch
+from py_bing_search import PyBingImageSearch        # pip install py-bing-search
 from collections import OrderedDict
 import json
 import os
 import time
 
-ACCOUNT_KEY = 'yourAccountKey'
-DEST_FOLDER = 'bing dl'
+ACCOUNT_KEY = 'YOUR_KEY'          #Set your own API key or Account Key here
+DEST_FOLDER = 'bingImages'
 NUM_RESULTS = 50
 FILE_NAME = 'bing_results'   #.json is automattically appended to the file name
 search_terms = [
                     "men Formal Shirt",
-                    "sunglasses for women",
-                    "women bags",
+                    "hats and caps",
                     "women jewellery",
                     "mens belt"
                 ]
@@ -50,10 +49,10 @@ if os.path.exists(DEST_FOLDER) == False:
 
 with open(DEST_FOLDER+'/'+FILE_NAME+'.json','w') as outfile:
     json.dump(download_files,outfile,indent=2)
-print 'File saved at '+DEST_FOLDER+'/'+FILE_NAME+'.json'
+print '\nFile saved at '+DEST_FOLDER+'/'+FILE_NAME+'.json with '+str(len(download_files)) + ' number of files'
 with open(DEST_FOLDER+'/'+FILE_NAME+'_search_res.json','w') as outfile:
     json.dump(search_results,outfile,indent=2)
-print 'Search results saved at '+DEST_FOLDER+'/'+FILE_NAME+'_search_res.json'
+print '\nSearch results saved at '+DEST_FOLDER+'/'+FILE_NAME+'_search_res.json with '+str(len(search_results)) + ' number of search results'
 
 # Remove any repetition in file names in URLs by appending timestamp to the image names
 noDupes = []
