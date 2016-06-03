@@ -1,9 +1,7 @@
 # bing-image-downloader
 This repo contains the python script for programatic bing image search and saving all the results in a set of JSON files suitable to download
 
-Run the bing_image_search.py file
-
-## Sample Response 
+## Sample Response by running the bing_image_search.py script
 ```
 Nirmals-MacBook-Pro:bing-image-downloader nirmal$ python bing_image_search.py
 Searching for .. men Formal Shirt
