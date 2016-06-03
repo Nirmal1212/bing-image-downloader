@@ -1,6 +1,9 @@
 ## Python program to scrape images based using search query in Bing Image search
 # Signup for a free developer account from Bing and get API key from here https://datamarket.azure.com/dataset/bing/search
-
+#
+# Author : Nirmalkumar Sathiamurthi
+# Date : June 3 2016
+#
 from py_bing_search import PyBingImageSearch
 from collections import OrderedDict
 import json
