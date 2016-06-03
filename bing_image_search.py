@@ -10,7 +10,7 @@ import json
 import os
 import time
 
-ACCOUNT_KEY = 'YOUR_KEY'          #Set your own API key or Account Key here
+ACCOUNT_KEY = 'YOUR_API_KEY'          #Set your own API key or Account Key here
 DEST_FOLDER = 'bingImages'
 NUM_RESULTS = 50
 FILE_NAME = 'bing_results'   #.json is automattically appended to the file name
@@ -28,20 +28,21 @@ for term in search_terms:
     bing = PyBingImageSearch(ACCOUNT_KEY,term)
     res = bing.search(limit=NUM_RESULTS,format='json')
     # Populate the results onto JSON array
-    for i in range(len(res)):
-        itm = { 'id':res[i].id,
-                'title':res[i].title,
-                'media_url':res[i].media_url,
-                'source_url':res[i].source_url,
-                'width':res[i].width,
-                'height':res[i].height,
-                'file_size':res[i].file_size,
-                'content_type':res[i].content_type,
+    for item in res:
+        itm = { 'id':item.id,
+                'title':item.title,
+                'media_url':item.media_url,
+                'source_url':item.source_url,
+                'width':item.width,
+                'height':item.height,
+                'file_size':item.file_size,
+                'content_type':item.content_type,
                 'search_term':term}
         search_results.append(itm)
-        url = res[i].media_url
+        url = item.media_url
         des_path,fname = os.path.join(DEST_FOLDER,term),url.split('/')[-1]
         download_files.append((url,os.path.join(des_path,fname)))
+    # break
 
 # Create the destination folder if it does not exist
 if os.path.exists(DEST_FOLDER) == False:
@@ -73,7 +74,8 @@ for i in download_files:
 with open(DEST_FOLDER+'/nodupes_'+FILE_NAME+'.json','w') as out:
     json.dump(noDupes,out,indent=1)
 print 'Processed file saved at '+'nodupes_'+FILE_NAME+'.json'
-print '\n\n*********\nsample search result = '
+print '\n*********\nsample search result = '
 print search_results[0]
-print '\n\n*********\nsample converted result for downloading = '
+print '\n*********\nsample converted result for downloading = '
 print noDupes[0]
+print '\n\n'
