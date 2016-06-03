@@ -163,3 +163,7 @@ len(result_list) == 130
 True
 result_list = bing_web.search_all(limit=130, format='json') #will return result 131 to 260
 ```
+
+
+### Reference/Contributors ###
+```py-bing-search ``` was written by https://github.com/tristantao/py-bing-search
