@@ -170,8 +170,6 @@ You can also run __*search_all*__ to keep searching until it fills your required
 from py_bing_search import PyBingWebSearch
 bing_web = PyBingNewsbSearch('Your-Api-Key-Here', "Python Software Foundation")
 result_list = bing_web.search_all(limit=130, format='json') #will return result 1 to 130
-len(result_list) == 130
-True
 result_list = bing_web.search_all(limit=130, format='json') #will return result 131 to 260
 ```
 
