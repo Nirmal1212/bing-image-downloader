@@ -26,7 +26,11 @@ download_files = []
 for term in search_terms:
     print 'Searching for ..',term
     bing = PyBingImageSearch(ACCOUNT_KEY,term)
-    res = bing.search(limit=NUM_RESULTS,format='json')
+    res = []
+    for n in xrange(50,NUM_RESULTS+1,50):
+        res.extend(bing.search(limit=NUM_RESULTS,format='json'))
+    
+    print 'Got {} items from bing'.format(len(res))
     # Populate the results onto JSON array
     for item in res:
         itm = { 'id':item.id,
