@@ -1,9 +1,14 @@
 # bing-image-downloader
 This repo contains the python script for programatic bing image search and saving all the results in a set of JSON files suitable to download
 
+Signup for a free developer account from Bing and get API key from here https://datamarket.azure.com/dataset/bing/search
+Bing supports free 5000 calls per month.
+
 ## Usage 
 ```
 from py_bing_search import PyBingImageSearch    # pip install py-bing-search
+# Signup for a free developer account from Bing and get API key from here https://datamarket.azure.com/dataset/bing/search
+# and use the API key below
 ACCOUNT_KEY = 'YOUR_KEY'                        # Set your own API key
 
 bing = PyBingImageSearch(ACCOUNT_KEY,"men Formal Shirt") 
